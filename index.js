@@ -137,6 +137,28 @@ function sendEmail(){
     emailjs.send("service_yf4ui9s","template_0cf8xkk",parms)
 }
 
+form.addEventListener("submit",(e)=>{
+    try {
+        e.preventDefault()
+        sendEmail()
+        contactDiv.style.display="none"
+        success.style.display="block";
+        setTimeout(()=>{
+            success.style.display="none";
+        },1500)
+        form.reset()
+        
+    } catch (error) {
+        contactDiv.style.display="none"
+        falseDiv.style.display="block";
+        setTimeout(()=>{
+            falseDiv.style.display="none";
+        },1500)
+        contactDiv.style.display="block"
+        
+    }
+    
 
+})
 
 
