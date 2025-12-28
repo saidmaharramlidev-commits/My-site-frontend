@@ -1,0 +1,863 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+
+/*-------------------------------------------------------------NAVBAR--------------------------------------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 80px;
+
+
+
+
+    z-index: 999;
+
+}
+
+.navbar.blur {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+.leftNav li {
+
+    list-style: none;
+}
+
+.leftNav a {
+    text-decoration: none;
+    color: white;
+    font-size: 200%;
+
+}
+
+
+.rightNav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+
+.rightNav a {
+    color: white;
+    text-decoration: none;
+    font-size: 130%;
+}
+
+.rightNav a:hover {
+    color: #00fff7;
+    transition: 0.6s;
+
+}
+
+
+
+
+/*-----------------------------------------------------------------SIDEBAR-----------------------------------------------------------*/
+#toggle {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    padding: 40px 15px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+
+}
+
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.sidebar-menu li {
+    margin-bottom: 25px;
+    
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #00fff7;
+    color: #000;
+    
+}
+
+.sidebar-menu li a::before {
+    content: "→";
+    margin-right: 10px;
+    color: #00fff7;
+}
+
+#toggle {
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 2px solid #00fff7;
+    color: #00fff7;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: all 0.3s ease;
+}
+
+
+
+
+/*-------------------------------------------------------------INTRODUCTION-----------------------------------------------------*/
+
+.container {
+
+    margin-top: 8%;
+    scroll-behavior: smooth;
+}
+
+.leftPartOfIntroduction h1 {
+    color: white;
+    padding-top: 150px;
+    font-size: 350%;
+    animation: slideFromLeft 1s backwards;
+
+}
+
+.leftPartOfIntroduction p {
+    color: white;
+    font-size: 200%;
+    animation: slideFromLeft 1s backwards;
+    animation-delay: 0.6s;
+
+}
+
+
+.rightPartOfIntroduction {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px;
+}
+
+.photoDiv {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #00fff7;
+    box-shadow: 0 0 30px #00fff7;
+    transition: transform 0.5s, box-shadow 0.5s;
+    animation: slideFromRight 1s backwards;
+    animation-delay: 0.4s;
+}
+
+.photoDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.photoDiv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #00fff7;
+}
+
+
+
+/*----------------------------------------------------------------ABOUT-------------------------------------------------------------*/
+
+
+.about {
+    text-align: right;
+
+    margin-top: 200px;
+}
+
+.headerOfAbout {
+    display: inline-block;
+    color: white;
+    font-size: 500%;
+    opacity: 0;
+    transform: translateX(130px);
+    transition: 1s ease;
+    will-change: opacity, transform;
+
+}
+
+.headerOfAbout span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.headerOfAbout:hover span {
+  transform: translateY(-4px) rotate(3deg);
+}
+
+
+.wordOfAbout {
+    color: #00fff7;
+    opacity: 0;
+    transform: translateX(130px);
+    transition: 1s ease;
+    will-change: opacity, transform;
+}
+
+.aboutDivs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    margin-top: 5%;
+}
+
+.aboutDiv {
+    width: 45%;
+    background-color: #121212;
+    border-radius: 10px;
+    border: 1px solid #00fff7;
+    box-shadow: 0 0 10px #00fff7;
+    text-align: center;
+}
+
+.aboutDiv:hover {
+    transform: scale(1.02);
+    transition: 0.6s;
+}
+
+.first li {
+    color: white;
+    font-size: 140%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.second li {
+    color: white;
+    font-size: 150%;
+
+    text-align: left;
+
+}
+
+.first {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: 0.7s ease;
+    will-change: opacity, transform;
+}
+
+.second {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.7s ease;
+    will-change: opacity, transform;
+}
+
+
+/*--------------------------------------------------------------------PROJECTS---------------------------------------------------*/
+
+.projects {
+    margin-top: 10%;
+}
+
+.projectHead {
+    display: inline-block;
+    color: white;
+    font-size: 500%;
+    opacity: 0;
+    transform: translateX(-130px);
+    transition: 1s ease;
+    will-change: opacity, transform;
+}
+
+.projectHead span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.projectHead:hover span {
+  transform: translateY(-4px) rotate(-3deg);
+}
+
+.advice {
+    font-size: 170%;
+    color: #00fff7;
+    opacity: 0;
+    transform: translateX(-130px);
+    transition: 1s ease;
+    will-change: opacity, transform;
+}
+
+.projectDiv {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    align-items: center;
+}
+
+.card {
+    width: 75%;
+    background-color: #121212;
+    color: white;
+    border: 1px solid #00fff7;
+    box-shadow: 0 0 6px #00fff7;
+    border-radius: 10px;
+    opacity: 0;
+
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.6s;
+}
+
+.cardButton {
+    display: inline-block;
+    padding: 10px 45px;
+    color: #00FFF7;
+    border: 1px solid #00FFF7;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cardButton:hover {
+    background-color: #00FFF7;
+    color: #0A0A0A;
+    box-shadow: 0 0 10px #00FFF7;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*---------------------------------------------------------------------CONTACT----------------------------------------------------*/
+
+.contactPart {
+    margin-top: 10%;
+    display: flex;
+
+}
+
+.rightContact {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+#contactHead {
+    font-size: 500%;
+    display: inline-block;
+    color: white;
+}
+
+#contactHead span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#contactHead:hover span {
+  transform: translateY(-4px) rotate(-3deg);
+}
+
+
+.social {
+    margin-top: 5%;
+    width: 70%;
+}
+
+.times li {
+    color: white;
+    list-style: none;
+    font-size: xx-large;
+
+}
+
+.times {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 4%;
+}
+
+
+
+.times li {
+    transition: transform .25s ease, background .25s ease;
+    border-radius: 8px;
+}
+
+.times li:hover {
+    transform: translateX(6px);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+.contactMe {
+    display: inline-block;
+    padding: 10px 80px;
+    color: #00FFF7;
+    border: 1px solid #00FFF7;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    transition: color .3s ease, box-shadow .3s ease;
+
+}
+
+.contactMe:hover {
+    background-color: #00FFF7;
+    color: #0A0A0A;
+    box-shadow: 0 0 10px #00FFF7;
+}
+
+.help {
+    color: #00FFF7;
+    text-shadow: 0 0 8px rgba(0, 255, 247, .6);
+    animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+
+.contactMe::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #00FFF7;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+    z-index: -1;
+}
+
+.contactMe:hover {
+    color: #001F24;
+    box-shadow: 0 0 15px rgba(0, 255, 247, .8);
+}
+
+.contactMe:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+/*---------------------------------------------------------------CONTACT FORM------------------------------------------------------*/
+
+
+.contact {
+    display: none;
+    position: fixed;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+
+
+
+
+}
+
+.form-content {
+    background: #09090B;
+    padding: 20px;
+    border-radius: 8px;
+
+    width: 100%;
+    border: 1px solid #00FFF7;
+    box-shadow: 0 0 15px #00FFF7;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideFromBottom2 0.6s backwards;
+}
+
+
+.closeButton {
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color: red;
+    width: 100%;
+    height: 46px;
+    text-align: center;
+    padding-top: 9px;
+    border-radius: 5px;
+    grid-column: span 2;
+
+}
+
+.closeButton:hover {
+    background-color: darkred;
+    transition: 0.4s;
+}
+
+.contact input {
+    width: 100%;
+    height: 45px;
+    background-color: #18181b;
+    border-radius: 5px;
+    border: 1px solid;
+    color: white;
+
+}
+
+.contact form {
+    width: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    animation: slideFromBottom2 0.7s backwards;
+    animation-delay: 0.6s;
+
+
+}
+
+.selectMenu {
+    display: block;
+    grid-column: span 2;
+    width: 100%;
+}
+
+.form-content textarea {
+    width: 100%;
+    height: 120px;
+    background-color: #18181b;
+    border-radius: 5px;
+    border: 1px solid;
+    color: grey;
+    grid-column: span 2;
+
+}
+
+#textareaForm {
+    color: white;
+}
+
+
+
+/*--------------------------------------------------------------------CONTACT STATUS------------------------------------------------*/
+
+
+.success {
+    display: none;
+
+    width: 100%;
+    position: fixed;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    background-color: black;
+    border: 1px solid #00FFF7;
+    box-shadow: 0 0 15px #00FFF7;
+    border-radius: 8px;
+}
+
+.success img {
+    width: 60%;
+
+}
+
+.loading{
+    visibility: hidden;
+    display: flex;
+    width: 50%;
+    height: 60%;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 500px;
+    background-color: black;
+    border: 1px solid #00FFF7;
+    box-shadow: 0 0 15px #00FFF7;
+    border-radius: 8px;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.ball{
+    background-color: #00FFF7;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+
+}
+
+.ball:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+
+.false {
+    display: none;
+
+    width: 100%;
+    position: fixed;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    background-color: black;
+    border: 1px solid red;
+    box-shadow: 0 0 15px red;
+    border-radius: 8px;
+
+}
+
+.false img {
+    width: 60%;
+
+}
+
+/*FOOTER*/
+
+
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: #00FFF7;
+    color: black;
+    margin-top: 3%;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 23px;
+
+}
+
+.footer p {
+    font-size: 130%;
+}
+
+
+
+/*----------------------------------------------------------------ANIMATIONS-------------------------------------------------------*/
+
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromBottom2 {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 6px rgba(0, 255, 247, .4);
+    }
+
+    50% {
+        text-shadow: 0 0 14px rgba(0, 255, 247, .9);
+    }
+
+    100% {
+        text-shadow: 0 0 6px rgba(0, 255, 247, .4);
+    }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+}
+
+
+
+.slideFromTop {
+    animation: slideFromTop 2s backwards;
+}
+
+.slideFromBottom {
+    animation: slideFromBottom 2s backwards;
+}
+
+.fading {
+    animation: fade 2s forwards;
+}
+
+.slideFromLeft {
+    animation: slideFromLeft 1s backwards;
+}
+
+.slideFromRight {
+    animation: slideFromRight 1s forwards;
+}
+
+
+
+
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.showY {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.showFade {
+    opacity: 1;
+    transition: 2s;
+}
+
+
+

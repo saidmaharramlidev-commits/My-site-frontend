@@ -1,0 +1,133 @@
+@media(max-width:768px) {
+
+    .leftPartOfIntroduction h1 {
+        padding-top: 100px;
+    }
+
+    .aboutDivs {
+        flex-direction: column;
+    }
+
+    .aboutDiv {
+        width: 100%;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .packages {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .package {
+        width: 100%;
+    }
+
+    .form-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+    .contactPart{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+}
+
+@media(max-width:480px) {
+
+    .rightNav {
+        display: none;
+    }
+
+    #toggle {
+        display: block;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    .leftPartOfIntroduction h1 {
+        padding-top: 70px;
+    }
+
+    .leftNav {
+        padding-left: 0;
+    }
+
+    .leftPartOfIntroduction h1 {
+        font-size: 230%;
+    }
+
+    .leftPartOfIntroduction p {
+        font-size: 140%;
+    }
+
+    .headerOfAbout {
+        font-size: 300%;
+    }
+
+    .navbar.blur {
+        backdrop-filter: none;
+        background: none;
+    }
+
+    .projectHead {
+        font-size: 300%;
+    }
+
+    .advice {
+        font-size: 130%;
+    }
+
+    .packagesHead {
+        font-size: 300%;
+    }
+
+    #contactHead {
+        font-size: 350%;
+    }
+
+    .contact {
+        width: 90%;
+        max-width: none;
+    }
+
+    .contact form {
+        grid-template-columns: 1fr;
+
+    }
+
+    .form-content textarea,
+    .contact input,
+    .closeButton {
+        grid-column: span 2;
+
+    }
+
+    .success {
+        width: 90%;
+    }
+
+    .false {
+        width: 90%;
+    }
+    .contactMe{
+        width: 55%;
+    }
+
+
+
+
+
+
+
+}
