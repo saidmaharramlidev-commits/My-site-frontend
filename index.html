@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "8UKo4wq_vijrp9GLh",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -75,7 +84,8 @@
                         </li>
 
                     </ul>
-                    <h6 style="text-align: left; color: #00fff7; padding-left: 10px;">Intersting information about myself</h6>
+                    <h6 style="text-align: left; color: #00fff7; padding-left: 10px;">Intersting information about
+                        myself</h6>
                     <p style="text-align: left;color: silver; padding-left: 10px;padding-top: 10px;">When I <span
                             style="color: #FFB800;">first</span> started practicing web development, I kept asking
                         myself, ‘<span style="color: #FF3B3B;">When</span> will I be
@@ -153,7 +163,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-3 projectThird" >
+                <div class="card mb-3 projectThird">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="assets/spotify prototype.png" class="img-fluid rounded-start" alt="...">
@@ -161,7 +171,8 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">SPOTIFY PROTOTYPE LAYOUT</h5>
-                                <p class="card-text" style="line-height: 1.2;">This is a Spotify-inspired music streaming prototype layout that
+                                <p class="card-text" style="line-height: 1.2;">This is a Spotify-inspired music
+                                    streaming prototype layout that
                                     focuses on the full user interface and experience without using any real APIs. It
                                     visually includes all core Spotify sections like navigation, playlists,content
                                     areas. This project highlights my UI/UX design skills, layout
@@ -220,13 +231,13 @@
         <div class="form-content">
             <h1 style="color: white;animation: slideFromBottom2 0.6s backwards;animation-delay: 0.3s;">Contact Me</h1>
             <form class="contactForma">
-                <input type="text" name="name" placeholder="Name" style="display: inline-block;" required>
-                <input type="text" name="surname" placeholder="Surname" style="display: inline-block;" required>
-                <input type="email" name="email" placeholder="Email" style="grid-column: span 2;width: 100%;" required>
+                <input type="text" id="name" placeholder="Name" style="display: inline-block;" required>
+                <input type="text" id="surname" placeholder="Surname" style="display: inline-block;" required>
+                <input type="email" id="email" placeholder="Email" style="grid-column: span 2;width: 100%;" required>
 
-                <textarea placeholder="How can I help you?" name="message" id="textareaForm" required></textarea>
+                <textarea placeholder="How can I help you?" name="message" id="message" required></textarea>
 
-                <input type="submit" value="Submit"
+                <input type="submit" value="Submit" onclick="sendEmail()"
                     style="display: block;color: black; background-color: white ; border: none; grid-column: span 2;">
                 <a href="" class="closeButton">Close</a>
 
