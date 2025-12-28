@@ -137,7 +137,7 @@ form.addEventListener("submit", async (e) => {
         message: form.message.value
     };
 
-    const res = await fetch(`${API_URL}/send`, {
+    const res = await fetch(`${API_URL}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
