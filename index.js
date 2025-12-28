@@ -48,12 +48,12 @@ contactBtn.addEventListener("click", (e) => {
 })
 
 closeBtn.addEventListener("click", (e) => {
-        contactDiv.style.display = "none";
-        e.preventDefault()
-        form.reset();
-    }
-        
-    
+    contactDiv.style.display = "none";
+    e.preventDefault()
+    form.reset();
+}
+
+
 );
 
 success.addEventListener("click", (e) => {
@@ -62,7 +62,7 @@ success.addEventListener("click", (e) => {
         e.preventDefault()
     }
 
-    
+
 });
 
 
@@ -120,12 +120,15 @@ window.addEventListener("scroll", () => {
 
 
 
+
+const API_URL = "https://my-site-backend-production.up.railway.app"; // your Railway URL
+
 form.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
-    loading.style.opacity=1;
-    contactDiv.style.display="none"
+    loading.style.opacity = 1;
+    contactDiv.style.display = "none"
 
     const data = {
         name: form.name.value,
@@ -134,7 +137,7 @@ form.addEventListener("submit", async (e) => {
         message: form.message.value
     };
 
-    const res = await fetch("/send", {
+    const res = await fetch(`${API_URL}/send`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -142,25 +145,26 @@ form.addEventListener("submit", async (e) => {
         body: JSON.stringify(data)
     });
 
-    if (res.ok) {
-        loading.style.opacity=0;
-        success.style.display="block"
 
-        setTimeout(()=>{
-            success.style.display="none"
-        },1500)
+    if (res.ok) {
+        loading.style.opacity = 0;
+        success.style.display = "block"
+
+        setTimeout(() => {
+            success.style.display = "none"
+        }, 1500)
 
 
     } else {
-        loading.style.opacity=0;
-        falseDiv.style.display="block"
+        loading.style.opacity = 0;
+        falseDiv.style.display = "block"
 
-        setTimeout(()=>{
-            falseDiv.style.display="none"
-            contactDiv.style.display="block"
-        },1500)
+        setTimeout(() => {
+            falseDiv.style.display = "none"
+            contactDiv.style.display = "block"
+        }, 1500)
 
-        
+
     }
 });
 
