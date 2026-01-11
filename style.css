@@ -101,7 +101,7 @@ html {
 
 .sidebar-menu li {
     margin-bottom: 25px;
-    
+
 }
 
 .sidebar-menu li a {
@@ -118,7 +118,7 @@ html {
 .sidebar-menu li a:hover {
     background-color: #00fff7;
     color: #000;
-    
+
 }
 
 .sidebar-menu li a::before {
@@ -224,12 +224,12 @@ html {
 }
 
 .headerOfAbout span {
-  display: inline-block;
-  transition: transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .headerOfAbout:hover span {
-  transform: translateY(-4px) rotate(3deg);
+    transform: translateY(-4px) rotate(3deg);
 }
 
 
@@ -310,12 +310,12 @@ html {
 }
 
 .projectHead span {
-  display: inline-block;
-  transition: transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .projectHead:hover span {
-  transform: translateY(-4px) rotate(-3deg);
+    transform: translateY(-4px) rotate(-3deg);
 }
 
 .advice {
@@ -400,12 +400,12 @@ html {
 }
 
 #contactHead span {
-  display: inline-block;
-  transition: transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 #contactHead:hover span {
-  transform: translateY(-4px) rotate(-3deg);
+    transform: translateY(-4px) rotate(-3deg);
 }
 
 
@@ -467,7 +467,7 @@ html {
 
 .help {
     color: #00FFF7;
-    text-shadow: 0 0 8px rgba(0, 255, 247, .6);
+    text-shadow: 0 0 14px rgba(0, 255, 247, .6);
     animation: glowPulse 2.5s ease-in-out infinite;
 }
 
@@ -624,7 +624,7 @@ html {
 
 }
 
-.loading{
+.loading {
     visibility: hidden;
     display: flex;
     width: 50%;
@@ -648,7 +648,7 @@ html {
 
 }
 
-.ball{
+.ball {
     background-color: #00FFF7;
     width: 25px;
     height: 25px;
@@ -659,11 +659,11 @@ html {
 }
 
 .ball:nth-child(2) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .ball:nth-child(3) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 
@@ -803,18 +803,20 @@ html {
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(-15px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0.6;
-  }
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
 }
 
 
@@ -858,6 +860,3 @@ html {
     opacity: 1;
     transition: 2s;
 }
-
-
-

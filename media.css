@@ -33,7 +33,8 @@
     .card {
         width: 100%;
     }
-    .contactPart{
+
+    .contactPart {
         flex-direction: column;
         gap: 40px;
     }
@@ -120,7 +121,8 @@
     .false {
         width: 90%;
     }
-    .contactMe{
+
+    .contactMe {
         width: 55%;
     }
 
