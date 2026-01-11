@@ -123,7 +123,12 @@
     }
 
     .contactMe {
-        width: 55%;
+        width: 65%;
+    }
+
+    .footer p {
+        padding-top: 4px;
+        font-size: 1.1rem;
     }
 
 
