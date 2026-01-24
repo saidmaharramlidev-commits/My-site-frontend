@@ -3,10 +3,6 @@ const sidebar = document.querySelector('.sidebar');
 const leftAboutDiv = document.querySelector(".first")
 const rightAboutDiv = document.querySelector(".second")
 const aboutHead = document.querySelector(".headerOfAbout")
-const project1 = document.querySelector(".projectFirst")
-const project2 = document.querySelector(".projectSecond")
-const project3 = document.querySelector(".projectThird")
-const project4 = document.querySelector(".projectFouth")
 const projectHead = document.querySelector(".projectHead");
 const advice = document.querySelector(".wordOfAbout")
 const projectAdvice = document.querySelector(".advice")
@@ -86,20 +82,8 @@ const observerOfY = new IntersectionObserver((elements) => {
     });
 });
 
-const observerOfFade = new IntersectionObserver((elements) => {
-    elements.forEach(element => {
-        if (element.isIntersecting) {
-            element.target.classList.add('showFade');      //to make fading of cards
-            observerOfFade.unobserve(element.target);
-        }
-    });
-});
 
 
-observerOfFade.observe(project1)
-observerOfFade.observe(project2)
-observerOfFade.observe(project3)
-observerOfFade.observe(project4)
 observerOfX.observe(aboutHead)
 observerOfX.observe(projectHead)
 observerOfX.observe(advice)
@@ -127,39 +111,39 @@ window.addEventListener("scroll", () => {
 //----------------------------------------------------EMAIL SENDER----------------------------------------------------------------
 
 
-function sendEmail(){
-    let parms={
-        name:document.getElementById("name").value,
-        surname:document.getElementById("surname").value,
-        email:document.getElementById("email").value,
-        message:document.getElementById("message").value,
+function sendEmail() {
+    let parms = {
+        name: document.getElementById("name").value,
+        surname: document.getElementById("surname").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
     }
 
 
-    emailjs.send("service_yf4ui9s","template_0cf8xkk",parms)
+    emailjs.send("service_yf4ui9s", "template_0cf8xkk", parms)
 }
 
-form.addEventListener("submit",(e)=>{
+form.addEventListener("submit", (e) => {
     try {
         e.preventDefault()
         sendEmail()
-        contactDiv.style.display="none"
-        success.style.display="block";
-        setTimeout(()=>{
-            success.style.display="none";
-        },1500)
+        contactDiv.style.display = "none"
+        success.style.display = "block";
+        setTimeout(() => {
+            success.style.display = "none";
+        }, 1500)
         form.reset()
-        
+
     } catch (error) {
-        contactDiv.style.display="none"
-        falseDiv.style.display="block";
-        setTimeout(()=>{
-            falseDiv.style.display="none";
-        },1500)
-        contactDiv.style.display="block"
-        
+        contactDiv.style.display = "none"
+        falseDiv.style.display = "block";
+        setTimeout(() => {
+            falseDiv.style.display = "none";
+        }, 1500)
+        contactDiv.style.display = "block"
+
     }
-    
+
 
 })
 
