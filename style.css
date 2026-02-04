@@ -7,6 +7,23 @@ html {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #02272e;
+    border-radius: 5px;
+
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: #011316;
+
+}
+
 
 
 /*-------------------------------------------------------------NAVBAR--------------------------------------------------------------*/
